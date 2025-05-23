@@ -1,0 +1,14 @@
+pipeline{
+  agent any
+  environment{
+    git_cred=""
+    docker_cred=""
+    
+  }
+
+  stages{
+    stage("scm"){
+      
+    }
+  }
+}
