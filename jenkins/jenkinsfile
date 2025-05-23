@@ -7,8 +7,44 @@ pipeline{
   }
 
   stages{
-    stage("scm"){
-      
-    }
+    stage('Checkout') {
+            steps {
+                // Checkout the GitHub repository
+                git branch: 'main', url: 'https://github.com/PavanThumati/jenkins-Training.git'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                
+                sh "echo hi"
+            }
+        }
+        
+        stage('Clean Up') {
+            steps {
+               sh "echo hi"
+            }
+        }
+
+        stage('Build Image') {
+            steps {
+                script {
+                    sh "echo hi"
+                }
+            }
+        }
+
+        stage('Push To DockerHub') {
+            steps {
+                sh "echo hi"
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                sh "echo hi"
+            }
+        }
   }
 }
